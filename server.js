@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 const http = require('http');
 const fs = require('fs');
@@ -51,4 +52,4 @@ http.createServer(function (req, res) {
         res.end("404 Not Found");
     }
 
-    }).listen(8080);
+    }).listen(process.env.PORT || 8080);
