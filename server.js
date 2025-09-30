@@ -1,4 +1,3 @@
-require('dotenv').config();
 
 const http = require('http');
 const fs = require('fs');
@@ -7,6 +6,7 @@ const path = require("path");
 const { getDate } = require('./modules/utils');
 
 const textFile = path.join(__dirname, 'file.txt');
+const PORT = process.env.PORT || 8080;
 
 http.createServer(function (req, res) {
     const q = url.parse(req.url, true);
